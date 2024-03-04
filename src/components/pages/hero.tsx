@@ -9,11 +9,11 @@ export function Hero() {
         <div className="flex flex-col justify-center space-y-4">
           <div className="mx-3 space-y-2 lg:space-y-3 max-w-md md:max-w-2xl lg:max-w-3xl">
             <h1 className="leading-tight lg::leading-snug font-black text-5xl lg:text-7xl ">
-              Your ready to code full stack platform.
+              This is your headline to say something smart.
             </h1>
             <p className="leading-normal text-xl text-muted-foreground">
-              Full Stack Starter Kit unites frameworks and libraries to get
-              started fast!
+              Some smaller text at the bottom of your headline to say something
+              witty!
             </p>
           </div>
           <Button
