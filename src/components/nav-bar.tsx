@@ -36,7 +36,7 @@ export const NavBar: React.FC<NavBarProps> = ({ currentTheme }) => {
   return (
     <nav className=" sticky top-0 z-50 border-b border-border/40 backdrop-blur flex items-center justify-between flex-wrap p-6">
       <div className="flex items-center flex-shrink-0 mr-6">
-        <span className="font-semibold text-xl tracking-tight">Fullstack</span>
+        <span className="font-bold text-xl">Fullstack</span>
       </div>
       <div className="flex items-center gap-4">
         <Button variant="link" className="">
