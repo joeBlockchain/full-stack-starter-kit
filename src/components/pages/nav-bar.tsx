@@ -1,20 +1,15 @@
 "use client";
 
+//import react stuff
+import { useState, useEffect } from "react";
+
+//import next stuff
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 
 //imoport shadcnui stuff
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
-  NavigationMenuLink,
-} from "@/components/ui/navigation-menu";
 
 //import icon stuff
 import { Menu } from "lucide-react";
@@ -34,18 +29,24 @@ export const NavBar: React.FC<NavBarProps> = ({ currentTheme }) => {
   }, []);
 
   return (
-    <nav className=" sticky top-0 z-50 border-b border-border/40 backdrop-blur flex items-center justify-between flex-wrap p-6">
-      <div className="flex items-center flex-shrink-0 mr-6">
-        <span className="font-bold text-xl">Fullstack</span>
+    <nav className="sticky top-0 z-50 border-b border-border/40 backdrop-blur flex items-center justify-between flex-wrap p-6">
+      <div className="flex items-center mr-6">
+        <span className="font-bold text-2xl">Fullstack</span>
       </div>
-      <div className="flex items-center gap-4">
-        <Button variant="link" className="">
+      <div className="flex items-center gap-3">
+        <Button variant="ghost" className="hidden md:block text-md">
+          Blog
+        </Button>
+        <Button variant="ghost" className="hidden md:block text-md">
+          Pricing
+        </Button>
+        <Button variant="outline" className="text-md">
           <SignInButton />
         </Button>
-        <Button variant="default" className="">
+        <Button variant="default" className="text-md">
           <SignUpButton />
         </Button>
-        <div>{mounted && <ModeToggle />}</div>
+        {/* <div>{mounted && <ModeToggle />}</div> */}
       </div>
     </nav>
   );
