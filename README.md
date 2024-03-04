@@ -1,10 +1,8 @@
-Given the need to include steps for setting up Clerk and Convex, I'll revise the README instructions to incorporate these critical steps. This update ensures users know they must obtain and set their Clerk API keys and initialize their Convex project before fully utilizing the template.
-
----
-
 # FullStackStarterKit
 
-This repository is a comprehensive template for starting full-stack web development projects, pre-configured with Next.js, Clerk, Convex, ShadcnUI, and TailwindCSS. It's designed to provide a robust foundation for building scalable and modern web applications.
+This repository is a comprehensive template for starting full-stack web development projects, pre-configured with Next.js, Clerk, Convex, ShadcnUI, and TailwindCSS.
+
+I created this because I needed a quick way to start new projects with all the tools I use regularly. I hope you find it useful too!
 
 ## How to Use the FullStackStarterKit
 
