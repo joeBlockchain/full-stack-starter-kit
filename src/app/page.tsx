@@ -16,10 +16,11 @@ import { ModeToggle } from "@/components/ui/mode-toggle";
 import { NavBar } from "@/components/pages/nav-bar";
 import { Hero } from "@/components/pages/hero";
 import { Partners } from "@/components/pages/partners";
+import { Footer } from "@/components/pages/footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <NavBar currentTheme="light" />
       <Hero />
       <div className="m-4 p-4 border border-border rounded-3xl">
@@ -37,6 +38,7 @@ export default function Home() {
         />
       </div>
       <Partners />
+      <Footer />
     </div>
   );
 }
