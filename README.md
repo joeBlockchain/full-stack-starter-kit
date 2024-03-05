@@ -58,6 +58,18 @@ git push -u origin main
 2. Follow the prompts to configure a new Convex project.
 3. The CLI will automatically update your `.env.local` with the necessary Convex configuration.
 
+### Step 6: Set Up Stripe
+
+1. create account on stripe
+2. obtain api key for developers
+3. copy secret key and add to env.local file
+
+   ```plaintext
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   ```
+
+4. add stripe key to convex
+
 ### Step 7: Install Dependencies
 
 ```bash

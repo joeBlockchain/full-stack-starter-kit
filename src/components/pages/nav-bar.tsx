@@ -11,9 +11,18 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 
+//import clerk stuff
+import {
+  SignInButton,
+  SignUpButton,
+  UserButton,
+  SignedIn,
+  SignedOut,
+  ClerkLoading,
+} from "@clerk/nextjs";
+
 //import icon stuff
-import { Menu } from "lucide-react";
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { UserRound } from "lucide-react";
 
 interface NavBarProps {
   currentTheme: string;
@@ -35,17 +44,32 @@ export const NavBar: React.FC<NavBarProps> = ({ currentTheme }) => {
       </div>
       <div className="flex items-center gap-3">
         <Button variant="ghost" className="hidden md:block text-md">
-          Blog
+          <Link href="/blog">Blog</Link>
         </Button>
         <Button variant="ghost" className="hidden md:block text-md">
-          Pricing
+          <Link href="/pricing">Pricing</Link>
         </Button>
-        <Button variant="outline" className="text-md">
-          <SignInButton />
-        </Button>
-        <Button variant="default" className="text-md">
-          <SignUpButton />
-        </Button>
+        <SignedOut>
+          <SignInButton>
+            <Button variant="outline" className="text-md">
+              Sign In
+            </Button>
+          </SignInButton>
+          <SignUpButton>
+            <Button variant="default" className="text-md">
+              Get Started
+            </Button>
+          </SignUpButton>
+        </SignedOut>
+        <ClerkLoading>
+          <div className="rounded-full bg-muted-foreground text-primary-foreground w-8 h-8 flex items-center justify-center">
+            <UserRound />
+          </div>
+        </ClerkLoading>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+
         {/* <div>{mounted && <ModeToggle />}</div> */}
       </div>
     </nav>

@@ -3,15 +3,20 @@
  * @see https://v0.dev/t/KhFi6cO8qUA
  */
 
+//import next stuff
+import Link from "next/link";
+
 //import shadcnui stuff
 import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
-    <footer className="w-full py-6 md:py-12 border-t bg-gray-50 dark:bg-gray-950">
+    <footer className="w-full mt-40 py-6 md:py-12 border-t bg-gray-50 dark:bg-gray-950">
       <div className="container gap-6 px-4 md:px-6">
         <div className="space-y-2 mb-10">
-          <h4 className="text-2xl font-semibold text-primary">Fullstack</h4>
+          <h4 className="text-2xl font-semibold text-primary">
+            <Link href="/">Fullstack</Link>
+          </h4>
           <p className=" text-muted-foreground">
             Insert your snappy one liner here.
           </p>
@@ -20,32 +25,54 @@ export function Footer() {
           <div className="space-y-2">
             <h4 className="text-lg text-muted-foreground">Company</h4>
             <ul className="flex flex-col gap-2 ">
-              <li>About Us</li>
-              <li>Blog</li>
+              <li>
+                <Link href="#">About Us</Link>
+              </li>
+              <li>
+                <Link href="#">Blog</Link>
+              </li>
             </ul>
           </div>
           <div className="space-y-2">
             <h4 className="text-lg  text-muted-foreground">Product</h4>
             <ul className="flex flex-col gap-2">
-              <li>Compare Us</li>
-              <li>Case Studies</li>
+              <li>
+                <Link href="#">Compare Us</Link>
+              </li>
+              <li>
+                <Link href="#">Case Studies</Link>
+              </li>
             </ul>
           </div>
           <div className="space-y-2">
             <h4 className="text-lg  text-muted-foreground">Solutions</h4>
             <ul className="flex flex-col gap-2">
-              <li>For Sales Teams</li>
-              <li>For Product Teams</li>
-              <li>For Marketing Teams</li>
-              <li>For Operations Teams</li>
-              <li>For Legal Teams</li>
+              <li>
+                <Link href="#">For Sales Teams</Link>
+              </li>
+              <li>
+                <Link href="#">For Product Teams</Link>
+              </li>
+              <li>
+                <Link href="#">For Marketing Teams</Link>
+              </li>
+              <li>
+                <Link href="#">For Operations Teams</Link>
+              </li>
+              <li>
+                <Link href="#">For Legal Teams</Link>
+              </li>
             </ul>
           </div>
           <div className="space-y-2">
             <h4 className="text-lg  text-muted-foreground">Resources</h4>
             <ul className="flex flex-col gap-2">
-              <li>Help Center</li>
-              <li>Community</li>
+              <li>
+                <Link href="#">Help Center</Link>
+              </li>
+              <li>
+                <Link href="#">Community</Link>
+              </li>
             </ul>
           </div>
         </div>

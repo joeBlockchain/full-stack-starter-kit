@@ -5,17 +5,11 @@ import Image from "next/image";
 import heroImageDark from "../../public/hero-dark.png";
 import heroImageLight from "../../public/hero-light.png";
 
-//import clerk stuff
-import { UserButton, SignIn, SignUp, SignedIn, SignedOut } from "@clerk/nextjs";
-
-//import shadcnui stuff
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/mode-toggle";
-
 //import custom stuff
 import { NavBar } from "@/components/pages/nav-bar";
 import { Hero } from "@/components/pages/hero";
 import { Partners } from "@/components/pages/partners";
+import { Plans } from "@/components/pages/plans";
 import { Footer } from "@/components/pages/footer";
 
 export default function Home() {
@@ -38,6 +32,7 @@ export default function Home() {
         />
       </div>
       <Partners />
+      <Plans />
       <Footer />
     </div>
   );

@@ -13,7 +13,9 @@ const fontSans = FontSans({
 import { ClerkProvider } from "@clerk/nextjs";
 
 //import shadcnui stuff
-import { ThemeProvider } from "@/components/theme-provider";
+
+//import providers - theme/clerk/convex
+import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,24 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body
-          className={cn(
-            "min-h-screen bg-background font-sans antialiased max-w-6xl mx-auto",
-            fontSans.variable
-          )}
-        >
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased max-w-6xl mx-auto",
+          fontSans.variable
+        )}
+      >
+        <Providers>{children}</Providers>
+      </body>
+    </html>
   );
 }
