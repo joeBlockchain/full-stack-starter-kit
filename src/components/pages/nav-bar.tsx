@@ -70,7 +70,7 @@ export const NavBar: React.FC<NavBarProps> = ({ currentTheme }) => {
           <UserButton />
         </SignedIn>
 
-        {/* <div>{mounted && <ModeToggle />}</div> */}
+        <div>{mounted && <ModeToggle />}</div>
       </div>
     </nav>
   );
