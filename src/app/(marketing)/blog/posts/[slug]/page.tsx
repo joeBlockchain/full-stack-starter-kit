@@ -4,6 +4,12 @@ import { ReactNode } from "react";
 //import next stuff
 import Link from "next/link";
 
+//import shadcnui stuff
+import { Button } from "@/components/ui/button";
+
+//import icon stuff
+import { ArrowLeft } from "lucide-react";
+
 //import blog stuff
 import { getBlogPosts } from "@/lib/blog";
 import ReactMarkdown from "react-markdown";
@@ -217,8 +223,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="mt-20 flex flex-col items-center justify-center">
-      <div className="max-w-2xl px-4 sm:px-6 lg:px-8">
+    <div className="mt-16 flex flex-col ">
+      <Button asChild variant="outline" className="w-40 ml-4 mb-8">
+        <Link href={`/blog`}>
+          <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
+        </Link>
+      </Button>
+      <div className="items-center justify-center max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="text-left space-y-8">
           <h1 className="text-6xl font-extrabold">{post.metadata.title}</h1>
           <h4 className="text-xl leading-relaxed ">{post.metadata.summary}</h4>

@@ -6,11 +6,9 @@ import heroImageDark from "../../public/hero-dark.png";
 import heroImageLight from "../../public/hero-light.png";
 
 //import custom stuff
-import { NavBar } from "@/components/pages/nav-bar";
-import { Hero } from "@/components/pages/hero";
-import { Partners } from "@/components/pages/partners";
-import { Plans } from "@/components/pages/plans";
-import { Footer } from "@/components/pages/footer";
+import { Hero } from "@/components/pages/landing/hero";
+import { Partners } from "@/components/pages/landing/partners";
+import { Plans } from "@/components/pages/landing/plans";
 
 export default function Home() {
   return (
@@ -32,7 +30,6 @@ export default function Home() {
       </div>
       <Partners />
       <Plans />
-      <Footer />
     </div>
   );
 }

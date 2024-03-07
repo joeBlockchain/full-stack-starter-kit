@@ -9,7 +9,7 @@
 //import shadcnui stuff
 
 //import custom stuff
-import { Plans } from "@/components/pages/plans";
+import { Plans } from "@/components/pages/landing/plans";
 
 export default function Page() {
   return (

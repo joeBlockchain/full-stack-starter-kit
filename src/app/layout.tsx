@@ -18,7 +18,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Providers } from "@/components/providers";
 
 //import custom stuff
-import { NavBar } from "@/components/pages/nav-bar";
+import { NavBar } from "@/components/pages/layout/nav-bar";
+import { Footer } from "@/components/pages/layout/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,18 +33,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-6xl mx-auto",
-          fontSans.variable
-        )}
-      >
-        <Providers>
+      <Providers>
+        <body
+          className={cn(
+            "min-h-screen bg-background font-sans antialiased max-w-6xl mx-auto",
+            fontSans.variable
+          )}
+        >
           {" "}
           <NavBar currentTheme="light" />
           {children}
-        </Providers>
-      </body>
+        </body>
+        <Footer />
+      </Providers>
     </html>
   );
 }

@@ -40,11 +40,11 @@ export default function BlogIndex() {
       </div>
       <Separator />
       <ul className="pt-6">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-24">
           {posts.map((post) => (
             <article
               key={post.slug}
-              className="prose prose-gray mx-auto dark:prose-invert"
+              className="prose prose-gray mx-auto dark:prose-invert h-full"
             >
               {/* <div className="p-28 bg-accent rounded-xl">IMAGE</div> */}
               <div className="space-y-4 not-prose">

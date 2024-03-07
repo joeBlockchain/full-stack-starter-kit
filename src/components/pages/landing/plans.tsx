@@ -18,7 +18,7 @@ import {
 
 //import convex stuff
 import { useAction, useQuery } from "convex/react";
-import { api } from "../../../convex/_generated/api";
+import { api } from "../../../../convex/_generated/api";
 
 //import shadcnui stuff
 import { Button } from "@/components/ui/button";
@@ -133,7 +133,7 @@ export function Plans() {
           </p>
         </div>
         <div className="flex justify-center space-x-4 mt-8">
-          <div className="relative flex items-center space-x-4">
+          <div className="relative flex items-start md:items-center space-x-4">
             <p>Monthly</p>
             <Switch
               checked={isAnnual}
@@ -148,7 +148,7 @@ export function Plans() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
         {plans.map((plan) => (
-          <Card key={plan.title}>
+          <Card key={plan.title} className=" max-w-sm ">
             <CardHeader>
               <CardTitle>{plan.title}</CardTitle>
               <CardDescription>{plan.description}</CardDescription>

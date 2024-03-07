@@ -62,15 +62,15 @@ export const NavBar: React.FC<NavBarProps> = ({ currentTheme }) => {
           </SignUpButton>
         </SignedOut>
         <ClerkLoading>
-          <div className="rounded-full bg-muted-foreground text-primary-foreground w-8 h-8 flex items-center justify-center">
-            <UserRound />
+          <div className="rounded-full bg-accent text-muted-foreground w-11 h-11 flex items-center justify-center">
+            <UserRound className="w-5 h-5" />
           </div>
         </ClerkLoading>
         <SignedIn>
           <UserButton />
         </SignedIn>
 
-        <div>{mounted && <ModeToggle />}</div>
+        <ModeToggle />
       </div>
     </nav>
   );

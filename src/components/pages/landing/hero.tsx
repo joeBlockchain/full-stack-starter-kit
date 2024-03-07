@@ -1,6 +1,12 @@
+//import next stuff
+import Link from "next/link";
+
+//import clerk stuff
+import { SignUpButton } from "@clerk/nextjs";
+
+//import shadcnui stuff
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export function Hero() {
   return (
@@ -16,12 +22,14 @@ export function Hero() {
               witty!
             </p>
           </div>
-          <Button
-            variant="default"
-            className="mx-3 w-40 text-lg h-12 lg:h-14 lg:rounded-xl lg:text-xl"
-          >
-            Get Started
-          </Button>
+          <SignUpButton>
+            <Button
+              variant="default"
+              className="mx-3 w-40 text-lg h-12 lg:h-14 lg:rounded-xl lg:text-xl"
+            >
+              Get Started
+            </Button>
+          </SignUpButton>
         </div>
       </div>
     </section>
