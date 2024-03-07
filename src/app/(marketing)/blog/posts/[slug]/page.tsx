@@ -217,7 +217,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <div className="mt-64 flex flex-col items-center justify-center">
+    <div className="mt-20 flex flex-col items-center justify-center">
       <div className="max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="text-left space-y-8">
           <h1 className="text-6xl font-extrabold">{post.metadata.title}</h1>

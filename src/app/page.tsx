@@ -15,7 +15,6 @@ import { Footer } from "@/components/pages/footer";
 export default function Home() {
   return (
     <div className="">
-      <NavBar currentTheme="light" />
       <Hero />
       <div className="m-4 p-4 border border-border rounded-3xl">
         <Image

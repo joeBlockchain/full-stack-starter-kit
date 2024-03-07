@@ -38,10 +38,10 @@ export const NavBar: React.FC<NavBarProps> = ({ currentTheme }) => {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border/40 backdrop-blur flex items-center justify-between flex-wrap p-6">
-      <div className="flex items-center mr-6">
+    <nav className="sticky top-0 z-50 border-b border-border/40 backdrop-blur flex items-center justify-between flex-wrap p-8">
+      <Link href="/" className="flex items-center mr-6">
         <span className="font-bold text-2xl">Fullstack</span>
-      </div>
+      </Link>
       <div className="flex items-center gap-3">
         <Button variant="ghost" className="hidden md:block text-md">
           <Link href="/blog">Blog</Link>
