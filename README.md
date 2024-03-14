@@ -11,7 +11,7 @@ To clone this template and start your own project, follow these instructions.
 ### Step 1: Clone the Template
 
 ```bash
-git clone https://github.com/your_username/FullStackStarterKit.git YourNewProjectName
+git clone https://github.com/joeBlockchain/full-stack-starter-kit.git YourNewProjectName
 cd YourNewProjectName
 ```
 
@@ -36,41 +36,7 @@ git branch -M main
 git push -u origin main
 ```
 
-### Step 5: Set Up Clerk
-
-1. Visit [Clerk Dashboard](https://dashboard.clerk.com) and create an account or log in.
-2. Create a new instance for your project and obtain your Clerk Frontend API Key and Clerk Secret Key.
-3. Copy `.env.local.sample` to a new file named `.env.local` and fill in your Clerk keys:
-
-   ```plaintext
-   NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api_key
-   CLERK_API_KEY=your_clerk_secret_key
-   ```
-
-### Step 6: Set Up Convex
-
-1. Run the following command to initialize your Convex development environment:
-
-   ```bash
-   npx convex dev
-   ```
-
-2. Follow the prompts to configure a new Convex project.
-3. The CLI will automatically update your `.env.local` with the necessary Convex configuration.
-
-### Step 6: Set Up Stripe
-
-1. create account on stripe
-2. obtain api key for developers
-3. copy secret key and add to env.local file
-
-   ```plaintext
-   STRIPE_SECRET_KEY=your_stripe_secret_key
-   ```
-
-4. add stripe key to convex
-
-### Step 7: Install Dependencies
+### Step 5: Install Dependencies
 
 ```bash
 npm install
@@ -82,7 +48,7 @@ Or if you're using Yarn:
 yarn
 ```
 
-### Step 8: Start Developing
+### Step 6: Start Development Server
 
 With Clerk and Convex configured, and dependencies installed, start the development server:
 
@@ -97,6 +63,47 @@ yarn dev
 ```
 
 Visit `http://localhost:3000` to see your application.
+
+### Step 7: Set Up Convex
+
+1. In a new terminal, run the following command to initialize your Convex development environment:
+
+   ```bash
+   npx convex dev
+   ```
+
+2. Follow the prompts to configure a new Convex project.
+3. The CLI will automatically update your `.env.local` with the necessary Convex configuration.
+
+### Step 8: Set Up Clerk
+
+1. Visit [Clerk Dashboard](https://dashboard.clerk.com) and create an account or log in.
+2. Create a new instance for your project and obtain your Clerk Frontend API Key and Clerk Secret Key.
+3. Copy `.env.local.sample` to a new file named `.env.local` and fill in your Clerk keys:
+
+   ```plaintext
+   NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api_key
+   CLERK_API_KEY=your_clerk_secret_key
+   ```
+
+4. navigate to JWT templates and create a new template and select convex as the provider
+5. copy the jwt issuer token and add to env.local file
+
+   ```plaintext
+   CLERK_JWT_ISSUER_DOMAIN=your_clerk_jwt_issuer_domain
+   ```
+
+### Step 9: Set Up Stripe
+
+1. create account on stripe
+2. obtain api key for developers
+3. copy secret key and add to env.local file
+
+   ```plaintext
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   ```
+
+4. add stripe key to convex
 
 ## Contributing
 
